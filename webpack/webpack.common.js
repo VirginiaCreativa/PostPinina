@@ -51,10 +51,15 @@ module.exports = {
       app.use(convert(history()));
     },
     content: commonPaths.entryPath,
-    dev: {
+    devServer: {
       publicPath: commonPaths.outputPath,
+      compress: true,
+      reload: true,
+      hot: true,
     },
-    open: true,
+    reload: true,
+    hot: true,
+    open: false,
   },
   resolve: {
     modules: ['src', 'node_modules'],
@@ -64,6 +69,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: commonPaths.templatePath,
+      title: 'PostPinina',
     }),
   ],
 };
