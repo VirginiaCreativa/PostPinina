@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import Layout from '../hoc/Layout/Layout';
+import Blog from './Blog';
+import NewBlog from '../components/NewPost/NewPost';
 
 class App extends Component {
-  state = {
-    name: 'Virginia Velásquez',
-  };
+  state = {};
 
   render() {
     return (
-      <>
-        <h1>{this.state.name}</h1>
-      </>
+      <Layout>
+        <div className="container">
+          <div className="row">
+            <div className="col-8">
+              <Blog />
+            </div>
+            <div className="col-4">
+              <NewBlog />
+            </div>
+          </div>
+        </div>
+      </Layout>
     );
   }
 }
