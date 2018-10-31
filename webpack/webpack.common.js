@@ -51,15 +51,17 @@ module.exports = {
       app.use(convert(history()));
     },
     content: commonPaths.entryPath,
-    devServer: {
-      publicPath: commonPaths.outputPath,
+    dev: {
+      publicPath: commonPaths.entryPath,
       compress: true,
       reload: true,
+      port: 3000,
       hot: true,
+      watchContentBase: true,
     },
     reload: true,
-    hot: true,
     open: false,
+    hot: true,
   },
   resolve: {
     modules: ['src', 'node_modules'],

@@ -52,8 +52,8 @@
     "lodash": "4.17.11",
     "npm-check-updates": "^2.14.2",
     "prop-types": "15.6.2",
-    "react": "^16.7.0-alpha.0",
-    "react-dom": "^16.7.0-alpha.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-hot-loader": "4.3.11"
   },
   "resolutions": {
@@ -110,7 +110,7 @@
     "koa-connect": "^2.0.1",
     "lint-staged": "7.3.0",
     "mini-css-extract-plugin": "0.4.4",
-    "node-sass": "4.9.4",
+    "node-sass": "^4.9.4",
     "prettier": "1.14.3",
     "pretty-quick": "1.8.0",
     "sass-loader": "7.1.0",

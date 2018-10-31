@@ -60,13 +60,15 @@
     "react/jsx-key": "error",
     "react/jsx-wrap-multilines": ["warn"],
     "react/jsx-indent-props": 0,
+    "react/button-has-type": 0,
     "no-trailing-spaces": [2, { "skipBlankLines": true }],
     "prefer-template": 0,
     "import/prefer-default-export": 0,
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
-    "babel/object-curly-spacing": 0
+    "babel/object-curly-spacing": 0,
+    "react/destructuring-assignment": 0
   },
   "env": {
     "es6": true,
