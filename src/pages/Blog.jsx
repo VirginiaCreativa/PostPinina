@@ -26,6 +26,10 @@ class Blog extends Component {
     this.setState({ selectPost: id });
   };
 
+  handleDeleteFullPost = () => {
+    this.setState({ selectPost: false });
+  };
+
   render() {
     return (
       <>
@@ -40,7 +44,10 @@ class Blog extends Component {
                 />
               </section>
               <section>
-                <FullPost selected={this.state.selectPost} />
+                <FullPost
+                  selected={this.state.selectPost}
+                  onDeleted={this.handleDeleteFullPost}
+                />
               </section>
             </div>
             <div className="col-4">

@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './FullPost.scss';
 
-const FullPost = ({ selected, title, content, autor, deleted }) => {
+const FullPost = ({ selected, title, content, autor, onDeleted }) => {
   let postDetalle;
   if (selected) {
     postDetalle = (
       <div className={classes.FullPost}>
-        <button onClick={deleted} className={classes.btnDelete}>
+        <button onClick={onDeleted} className={classes.btnDelete}>
           X
         </button>
         <h3>{title}</h3>
