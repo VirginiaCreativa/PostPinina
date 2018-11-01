@@ -18,8 +18,6 @@ class Blog extends Component {
               </section>
               <section>
                 <ListPost />
-                <ListPost />
-                <ListPost />
               </section>
             </div>
             <div className="col-4">
