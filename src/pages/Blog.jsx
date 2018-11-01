@@ -7,7 +7,7 @@ class Blog extends Component {
     return (
       <>
         <section>
-          <FullPost />
+          <FullPost title="Title Posts" content="Fdfladsjfhsdkjfhkjdshk" />
         </section>
         <section>
           <ListPost />
