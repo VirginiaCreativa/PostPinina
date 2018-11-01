@@ -68,7 +68,8 @@
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
     "babel/object-curly-spacing": 0,
-    "react/destructuring-assignment": 0
+    "react/destructuring-assignment": 0,
+    "no-console": 0
   },
   "env": {
     "es6": true,

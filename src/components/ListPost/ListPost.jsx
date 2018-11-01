@@ -1,12 +1,12 @@
 import React from 'react';
 import ListPostItem from './ListPostItem/ListPostItem';
 
-const ListPost = () => (
+const ListPost = ({ listItem }) => (
   <>
     <div className="row">
-      <ListPostItem title="List Post 1" autor="Virginia" />
-      <ListPostItem title="List Post 2" autor="Caro" />
-      <ListPostItem title="List Post 3" autor="Diego" />
+      {listItem.map(item => (
+        <ListPostItem key={item.id} {...item} />
+      ))}
     </div>
   </>
 );
