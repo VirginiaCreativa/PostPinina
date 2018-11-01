@@ -4,6 +4,14 @@
   position: relative;
   p {
     margin-bottom: 0;
+    &.Autor {
+      background-color: $write_gray_3;
+      display: inline-block;
+      color: $gray_medium;
+      font-style: italic;
+      font-size: 12px;
+      padding: 0 4px;
+    }
   }
   .btnDelete {
     position: absolute;

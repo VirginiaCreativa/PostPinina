@@ -32,6 +32,7 @@ class Blog extends Component {
                 <FullPost
                   title="Title Posts"
                   content="Fdfladsjfhsdkjfhkjdshk"
+                  autor="Virginia"
                 />
               </section>
               <section>
