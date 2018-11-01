@@ -1,9 +1,18 @@
 .ListPostItem {
   border: 2px solid #2f3542;
   padding: 10px;
+  margin-bottom: 10px;
+  min-height: 130px;
+  max-height: 170px;
+  position: relative;
+  h6 {
+    overflow-wrap: break-word;
+  }
   p {
     margin-bottom: 0;
     &.Autor {
+      position: absolute;
+      bottom: 10px;
       background-color: $write_gray_3;
       display: inline-block;
       color: $gray_medium;
