@@ -1,10 +1,13 @@
 import React from 'react';
+import classes from './Layout.scss';
 import Header from '../Header/Header';
 
 const layout = ({ children }) => (
   <>
-    <Header />
-    {children}
+    <div className={classes.layout}>
+      <Header />
+      {children}
+    </div>
   </>
 );
 
