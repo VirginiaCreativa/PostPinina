@@ -1,0 +1,38 @@
+.NewPost {
+  input,
+  textarea,
+  select {
+    outline: none !important;
+    border: 2px solid #2f3542;
+    border-radius: unset !important;
+    appearance: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    &:hover,
+    &:focus {
+      background-color: $write_gray_3;
+      outline: none !important;
+    }
+  }
+}
+:global {
+  .form-group {
+    position: relative;
+  }
+  .fas {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+  }
+   input,
+   textarea,
+   select {
+     outline: none !important;
+     box-shadow: none !important;
+     &:hover,
+     &:focus, 
+     {
+       border-color: $gray_medium !important;
+     }
+   }
+}
