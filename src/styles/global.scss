@@ -3,10 +3,11 @@ body {
 }
 p {
   font-family: 'Rubik', sans-serif !important;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   color: #444444;
-  word-spacing: 1px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
 }
 p, h1, h2, h3, h4, h5, h6, a, span {
   &::selection {
@@ -44,4 +45,6 @@ blockquote {
     margin-bottom: 0;
   }
 }
-
+section {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,22 @@
+.FullPost {
+  border: 2px solid #2f3542;
+  padding: 10px;
+  position: relative;
+  p {
+    margin-bottom: 0;
+  }
+  .btnDelete {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    color: $gray_light;
+    font-size: 20px;
+    &:hover {
+      color: #ff4757;
+    }
+  }
+}
