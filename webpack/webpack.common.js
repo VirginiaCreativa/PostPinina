@@ -52,16 +52,10 @@ module.exports = {
     },
     content: commonPaths.entryPath,
     dev: {
-      publicPath: commonPaths.entryPath,
-      compress: true,
-      reload: true,
-      port: 3000,
-      hot: true,
-      watchContentBase: true,
+      publicPath: commonPaths.outputPath,
     },
     reload: true,
     open: false,
-    hot: true,
   },
   resolve: {
     modules: ['src', 'node_modules'],
