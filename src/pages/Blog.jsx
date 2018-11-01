@@ -8,6 +8,7 @@ const baseURL = 'https://jsonplaceholder.typicode.com/posts';
 class Blog extends Component {
   state = {
     posts: [],
+    selectPost: null,
   };
 
   componentDidMount() {
@@ -21,6 +22,10 @@ class Blog extends Component {
       .catch(err => console.log(err));
   }
 
+  handleSelectPost = id => {
+    this.setState({ selectPost: id });
+  };
+
   render() {
     return (
       <>
@@ -28,16 +33,14 @@ class Blog extends Component {
           <div className="row">
             <div className="col-8">
               <section>
-                <h6>Full Post</h6>
-                <FullPost
-                  title="Title Posts"
-                  content="Fdfladsjfhsdkjfhkjdshk"
-                  autor="Virginia"
+                <h6>Lists Posts</h6>
+                <ListPost
+                  listItem={this.state.posts}
+                  onClicked={this.handleSelectPost}
                 />
               </section>
               <section>
-                <h6>Lists Posts</h6>
-                <ListPost listItem={this.state.posts} />
+                <FullPost selected={this.state.selectPost} />
               </section>
             </div>
             <div className="col-4">
