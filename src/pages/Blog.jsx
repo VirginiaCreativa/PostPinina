@@ -11,12 +11,14 @@ class Blog extends Component {
           <div className="row">
             <div className="col-8">
               <section>
+                <h6>Full Post</h6>
                 <FullPost
                   title="Title Posts"
                   content="Fdfladsjfhsdkjfhkjdshk"
                 />
               </section>
               <section>
+                <h6>Lists Posts</h6>
                 <ListPost />
               </section>
             </div>
