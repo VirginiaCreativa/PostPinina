@@ -29,9 +29,9 @@ class FullPost extends Component {
 
   handleDeleteFullPost = () => {
     axios.delete(baseURL + this.props.idPost).then(response => {
-      const data = response.data.id;
-      const temp = data.filter(item => item.id !== this.props.idPost);
-      this.setState({ loadedPost: temp });
+      const deleted = response.data.id;
+      console.log('DELETE', deleted);
+      // this.setState({ loadedPost: response.data.id });
     });
   };
 
@@ -46,7 +46,9 @@ class FullPost extends Component {
           <h6>Full Post</h6>
           <div className={classes.FullPost}>
             <button
-              onClick={this.handleDeleteFullPost}
+              onClick={() =>
+                this.handleDeleteFullPost(this.state.loadedPost.id)
+              }
               className={classes.btnDelete}
             >
               X
