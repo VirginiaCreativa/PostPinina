@@ -54,7 +54,7 @@ class FullPost extends Component {
               X
             </button>
             <h3>{this.state.loadedPost.title}</h3>
-            <p>{this.state.loadedPost.content}</p>
+            <p>{this.state.loadedPost.body}</p>
             <p className={classes.Autor}>{autor}</p>
           </div>
         </>

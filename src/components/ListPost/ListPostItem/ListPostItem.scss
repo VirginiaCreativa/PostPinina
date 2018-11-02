@@ -6,8 +6,11 @@
   max-height: 170px;
   position: relative;
   cursor: pointer;
-  h6 {
+  h5 {
     overflow-wrap: break-word;
+    &:first-letter {
+      text-transform: capitalize
+    }
   }
   p {
     margin-bottom: 0;
