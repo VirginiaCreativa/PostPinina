@@ -6,6 +6,10 @@
   max-height: 170px;
   position: relative;
   cursor: pointer;
+  transition: all .3s ease;
+  &:hover {
+    background-color: $write_gray_3;
+  }
   h5 {
     overflow-wrap: break-word;
     &:first-letter {
