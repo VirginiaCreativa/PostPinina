@@ -4,7 +4,6 @@ import FullPost from '../components/FullPost/FullPost';
 import ListPost from '../components/ListPost/ListPost';
 import NewPost from '../components/NewPost/NewPost';
 
-const baseURL = 'https://jsonplaceholder.typicode.com/posts/';
 class Blog extends Component {
   state = {
     posts: [],
@@ -14,7 +13,7 @@ class Blog extends Component {
 
   componentDidMount() {
     axios
-      .get(baseURL)
+      .get('/posts')
       .then(response => {
         const posts = response.data.slice(0, 8);
         const updatedPost = posts.map(post => ({ ...post, autor: 'Virginia' }));

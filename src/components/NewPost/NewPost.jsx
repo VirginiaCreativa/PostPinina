@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './NewPost.scss';
 
-const baseURL = 'https://jsonplaceholder.typicode.com/posts/';
-
 class newPost extends Component {
   state = {
     title: '',
@@ -17,7 +15,7 @@ class newPost extends Component {
       body: this.state.content,
       autor: this.state.autor,
     };
-    axios.post(baseURL, data).then(response => console.log(response));
+    axios.post('/posts/', data).then(response => console.log(response));
   };
 
   render() {

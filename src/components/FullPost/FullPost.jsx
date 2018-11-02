@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import classes from './FullPost.scss';
 
-const baseURL = 'https://jsonplaceholder.typicode.com/posts/';
-
 class FullPost extends Component {
   state = {
     loadedPost: null,
@@ -17,7 +15,7 @@ class FullPost extends Component {
           this.state.loadedPost.id !== this.props.idPost)
       ) {
         axios
-          .get(baseURL + this.props.idPost)
+          .get('/posts/' + this.props.idPost)
           .then(response => {
             console.log(response.data.id);
             this.setState({ loadedPost: response.data });
@@ -28,7 +26,7 @@ class FullPost extends Component {
   }
 
   handleDeleteFullPost = () => {
-    axios.delete(baseURL + this.props.idPost).then(response => {
+    axios.delete('/posts/' + this.props.idPost).then(response => {
       const deleted = response.data.id;
       console.log('DELETE', deleted);
       // this.setState({ loadedPost: response.data.id });
