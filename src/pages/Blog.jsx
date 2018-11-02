@@ -4,11 +4,12 @@ import FullPost from '../components/FullPost/FullPost';
 import ListPost from '../components/ListPost/ListPost';
 import NewPost from '../components/NewPost/NewPost';
 
-const baseURL = 'https://jsonplaceholder.typicode.com/posts';
+const baseURL = 'https://jsonplaceholder.typicode.com/posts/';
 class Blog extends Component {
   state = {
     posts: [],
-    selectPost: null,
+    selectPostId: null,
+    loadedPost: null,
   };
 
   componentDidMount() {
@@ -22,12 +23,12 @@ class Blog extends Component {
       .catch(err => console.log(err));
   }
 
-  handleSelectPost = id => {
-    this.setState({ selectPost: id });
+  handleSelectPostId = id => {
+    this.setState({ selectPostId: id });
   };
 
   handleDeleteFullPost = () => {
-    this.setState({ selectPost: false });
+    this.setState({ selectPostId: false });
   };
 
   render() {
@@ -40,13 +41,14 @@ class Blog extends Component {
                 <h6>Lists Posts</h6>
                 <ListPost
                   listItem={this.state.posts}
-                  onClicked={this.handleSelectPost}
+                  onClicked={this.handleSelectPostId}
                 />
               </section>
               <section>
                 <FullPost
-                  selected={this.state.selectPost}
+                  idPost={this.state.selectPostId}
                   onDeleted={this.handleDeleteFullPost}
+                  loadedPost={this.state.loadedPost}
                 />
               </section>
             </div>
