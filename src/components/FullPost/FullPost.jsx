@@ -13,12 +13,15 @@ class FullPost extends Component {
     if (this.props.idPost) {
       axios
         .get(baseURL + this.props.idPost)
-        .then(response => console.log(response.data));
+        .then(response => {
+          this.setState({ loadedPost: response.data });
+        })
+        .catch(err => console.log(err));
     }
   }
 
   render() {
-    const { onDeleted, idPost, loadedPost, autor } = this.props;
+    const { onDeleted, idPost, autor } = this.props;
 
     let postDetalle;
     if (idPost) postDetalle = <h3>Loading....</h3>;
@@ -30,8 +33,8 @@ class FullPost extends Component {
             <button onClick={onDeleted} className={classes.btnDelete}>
               X
             </button>
-            <h3>{loadedPost.title}</h3>
-            <p>{loadedPost.content}</p>
+            <h3>{this.state.loadedPost.title}</h3>
+            <p>{this.state.loadedPost.content}</p>
             <p className={classes.Autor}>{autor}</p>
           </div>
         </>
