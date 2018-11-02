@@ -11,17 +11,32 @@ class FullPost extends Component {
 
   componentDidUpdate() {
     if (this.props.idPost) {
-      axios
-        .get(baseURL + this.props.idPost)
-        .then(response => {
-          this.setState({ loadedPost: response.data });
-        })
-        .catch(err => console.log(err));
+      if (
+        !this.state.loadedPost ||
+        (this.state.loadedPost &&
+          this.state.loadedPost.id !== this.props.idPost)
+      ) {
+        axios
+          .get(baseURL + this.props.idPost)
+          .then(response => {
+            console.log(response.data.id);
+            this.setState({ loadedPost: response.data });
+          })
+          .catch(err => console.log(err));
+      }
     }
   }
 
+  handleDeleteFullPost = () => {
+    axios.delete(baseURL + this.props.idPost).then(response => {
+      const data = response.data.id;
+      const temp = data.filter(item => item.id !== this.props.idPost);
+      this.setState({ loadedPost: temp });
+    });
+  };
+
   render() {
-    const { onDeleted, idPost, autor } = this.props;
+    const { idPost, autor } = this.props;
 
     let postDetalle;
     if (idPost) postDetalle = <h3>Loading....</h3>;
@@ -30,7 +45,10 @@ class FullPost extends Component {
         <>
           <h6>Full Post</h6>
           <div className={classes.FullPost}>
-            <button onClick={onDeleted} className={classes.btnDelete}>
+            <button
+              onClick={this.handleDeleteFullPost}
+              className={classes.btnDelete}
+            >
               X
             </button>
             <h3>{this.state.loadedPost.title}</h3>
