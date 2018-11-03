@@ -29,26 +29,24 @@ class Blog extends Component {
   render() {
     return (
       <>
-        <div className="container">
-          <div className="row">
-            <div className="col-8">
-              <section>
-                <h6>Lists Posts</h6>
-                <ListPost
-                  listItem={this.state.posts}
-                  onClicked={this.handleSelectPostId}
-                />
-              </section>
-              <section>
-                <FullPost
-                  idPost={this.state.selectPostId}
-                  loadedPost={this.state.loadedPost}
-                />
-              </section>
-            </div>
-            <div className="col-4">
-              <NewPost />
-            </div>
+        <div className="row">
+          <div className="col-8">
+            <section>
+              <h6>Lists Posts</h6>
+              <ListPost
+                listItem={this.state.posts}
+                onClicked={this.handleSelectPostId}
+              />
+            </section>
+            <section>
+              <FullPost
+                idPost={this.state.selectPostId}
+                loadedPost={this.state.loadedPost}
+              />
+            </section>
+          </div>
+          <div className="col-4">
+            <NewPost />
           </div>
         </div>
       </>
