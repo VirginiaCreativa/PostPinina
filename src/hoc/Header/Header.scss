@@ -1,7 +1,7 @@
 .Header {
   padding: 20px;
   margin-bottom: 20px;
-  .Box {
+  .Logo {
     h1 {
       border-radius: 2px;
       font-size: 24px;
@@ -15,5 +15,29 @@
         font-weight: 400;
       }
     }
+  }
+  .Nav {
+    ul {
+      padding: 5px 0;
+      li {
+        margin: 0 10px;
+        a {
+          color: $black;
+          text-transform: uppercase;
+          font-weight: 400;
+          padding-bottom: 8px;
+          border-bottom: 2px solid $black;
+          &:hover {
+            color: $gray_medium;
+            border-bottom: 2px solid $gray_medium;
+          }
+        }
+      }
+    } 
+  }
+}
+:global {
+  .nav-link {
+    padding: 0 !important;
   }
 }
