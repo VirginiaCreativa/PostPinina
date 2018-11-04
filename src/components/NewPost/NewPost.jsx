@@ -22,7 +22,6 @@ class newPost extends Component {
     return (
       <>
         <div className={classes.NewPost}>
-          <h4>Create Post</h4>
           <form>
             <div className="form-group">
               <input

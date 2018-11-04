@@ -3,6 +3,8 @@ import { hot } from 'react-hot-loader';
 import Layout from '../hoc/Layout/Layout';
 import Blog from './Blog';
 // import About from './About';
+// import NewPost from './NewPost';
+// import PostDetalle from './PostDetalle';
 
 class App extends Component {
   state = {};
@@ -12,6 +14,7 @@ class App extends Component {
       <Layout>
         <Blog />
         {/* <About /> */}
+        {/* <PostDetalle /> */}
       </Layout>
     );
   }

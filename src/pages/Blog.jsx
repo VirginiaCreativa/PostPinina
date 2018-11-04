@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import FullPost from '../components/FullPost/FullPost';
 import ListPost from '../components/ListPost/ListPost';
-import NewPost from '../components/NewPost/NewPost';
 
 class Blog extends Component {
   state = {
     posts: [],
-    selectPostId: null,
-    loadedPost: null,
   };
 
   componentDidMount() {
@@ -22,15 +18,11 @@ class Blog extends Component {
       .catch(err => console.log(err));
   }
 
-  handleSelectPostId = id => {
-    this.setState({ selectPostId: id });
-  };
-
   render() {
     return (
       <>
         <div className="row">
-          <div className="col-8">
+          <div className="col-12">
             <section>
               <h6>Lists Posts</h6>
               <ListPost
@@ -38,15 +30,6 @@ class Blog extends Component {
                 onClicked={this.handleSelectPostId}
               />
             </section>
-            <section>
-              <FullPost
-                idPost={this.state.selectPostId}
-                loadedPost={this.state.loadedPost}
-              />
-            </section>
-          </div>
-          <div className="col-4">
-            <NewPost />
           </div>
         </div>
       </>

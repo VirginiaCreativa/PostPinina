@@ -6,9 +6,9 @@ const ListPostItem = ({ clicked, title, autor }) => {
   const size = title.length;
 
   if (size <= 20) {
-    shorText = title.slice(0, 20);
+    shorText = title.slice(0, 50);
   } else {
-    shorText = title.slice(0, 50) + '...';
+    shorText = title.slice(0, 80) + '...';
   }
 
   return (
