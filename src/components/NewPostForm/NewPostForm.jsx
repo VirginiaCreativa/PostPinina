@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import classes from './NewPost.scss';
+import classes from './NewPostForm.scss';
 
 class newPost extends Component {
   state = {

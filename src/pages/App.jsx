@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import { Route, Switch } from 'react-router-dom';
+
 import Layout from '../hoc/Layout/Layout';
 import Blog from './Blog';
-// import About from './About';
-// import NewPost from './NewPost';
-// import PostDetalle from './PostDetalle';
+import About from './About';
+import NewPost from './NewPost';
 
 class App extends Component {
   state = {};
@@ -12,9 +13,11 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Blog />
-        {/* <About /> */}
-        {/* <PostDetalle /> */}
+        <Switch>
+          <Route exact path="/" component={Blog} />
+          <Route path="/about" component={About} />
+          <Route path="/newpost" component={NewPost} />
+        </Switch>
       </Layout>
     );
   }
