@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Header.scss';
+import Navigations from '../Navigations/Navigations';
 
 const header = () => (
   <>
@@ -15,25 +16,7 @@ const header = () => (
             </div>
           </div>
           <div className="col">
-            <nav className={classes.Nav}>
-              <ul className="nav justify-content-end">
-                <li className="nav-item">
-                  <a className="nav-link active" href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/about">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/newpost">
-                    New Post
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <Navigations />
           </div>
         </div>
       </div>
