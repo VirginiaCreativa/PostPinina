@@ -3,6 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Blog from '../pages/Blog';
 import About from '../pages/About';
 import NewPost from '../pages/NewPost';
+import NotFound from '../pages/NotFound';
 
 class Routes extends Component {
   state = {};
@@ -13,9 +14,9 @@ class Routes extends Component {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/newpost" component={NewPost} />
-          {/* <Route path="/NotFound" component={NotFound} /> */}
+          <Route path="/notfound" component={NotFound} />
           <Route path="/" exact component={Blog} />
-          <Redirect from="*" to="/NotFound" />
+          <Redirect from="*" to="/notfound" />
         </Switch>
       </>
     );
