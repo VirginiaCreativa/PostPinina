@@ -29,7 +29,7 @@ class Posts extends Component {
         <div className="row">
           {this.state.posts.map(item => (
             <div className="col-4" key={item.id}>
-              <Link to={'/' + item.id}>
+              <Link to={'/posts/' + item.id}>
                 <Post
                   clicked={() => this.handleSelectPostId(item.id)}
                   {...item}
