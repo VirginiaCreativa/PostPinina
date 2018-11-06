@@ -7,20 +7,14 @@ import App from './pages/App.jsx';
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
 
 axios.interceptors.request.use(
-  request => {
-    console.log(request);
-    return request;
-  },
+  request => request,
   error => {
     console.log(error);
     return Promise.reject(error);
   },
 );
 axios.interceptors.response.use(
-  response => {
-    console.log(response);
-    return response;
-  },
+  response => response,
   error => {
     console.log(error);
     return Promise.reject(error);

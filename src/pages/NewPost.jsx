@@ -5,6 +5,7 @@ class About extends Component {
   state = {};
 
   render() {
+    console.log(this.props);
     return (
       <>
         <h2>New Post</h2>

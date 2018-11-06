@@ -24,7 +24,8 @@
   .nav-link {
     padding: 0 !important;
   }
-  .is-selected {
+  .is-selected,
+  a.active {
     border-bottom: 2px solid $gray_light !important;
     color: $gray_light !important;
   }

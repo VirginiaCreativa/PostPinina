@@ -5,14 +5,19 @@ import NavLink from './Navigation/Navigation';
 const Navigations = () => (
   <div className={classes.Navigations}>
     <ul className="nav justify-content-end">
-      <NavLink toLink="/">Home</NavLink>
-      <NavLink toLink="/about">About</NavLink>
+      <NavLink toLink="/" exact activeClassName>
+        Home
+      </NavLink>
+      <NavLink toLink="/about" activeClassName>
+        About
+      </NavLink>
       <NavLink
         toLink={{
           pathname: '/newpost',
           hash: '#submit',
           search: '?quick-subtime=true',
         }}
+        activeClassName
       >
         New Post
       </NavLink>

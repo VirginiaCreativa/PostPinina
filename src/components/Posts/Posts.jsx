@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Post from './Post/Post';
 
@@ -27,11 +28,14 @@ class Posts extends Component {
       <>
         <div className="row">
           {this.state.posts.map(item => (
-            <Post
-              key={item.id}
-              clicked={() => this.handleSelectPostId(item.id)}
-              {...item}
-            />
+            <div className="col-4" key={item.id}>
+              <Link to={'/' + item.id}>
+                <Post
+                  clicked={() => this.handleSelectPostId(item.id)}
+                  {...item}
+                />
+              </Link>
+            </div>
           ))}
         </div>
       </>
