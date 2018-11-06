@@ -14,7 +14,7 @@ class Routes extends Component {
     return (
       <>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/newpost" component={NewPost} />
           <Route path="/blog/" component={Blog} />

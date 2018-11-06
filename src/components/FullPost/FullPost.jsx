@@ -45,6 +45,10 @@ class FullPost extends Component {
     });
   };
 
+  handleGoBack = () => {
+    this.props.history.goBack();
+  };
+
   render() {
     const { idPost, autor } = this.props;
     let postDetalle;
@@ -66,6 +70,9 @@ class FullPost extends Component {
             <p>{this.state.loadedPost.body}</p>
             <p className={classes.Autor}>{autor}</p>
           </div>
+          <button onClick={this.handleGoBack} className={classes.btnVolver}>
+            Volver...
+          </button>
         </>
       );
     }
