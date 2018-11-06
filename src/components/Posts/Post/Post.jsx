@@ -12,9 +12,11 @@ const ListPostItem = ({ clicked, title, autor }) => {
   }
   return (
     <>
-      <div className={classes.Post} onClick={clicked} role="presentation">
-        <h5>{shorText}</h5>
-        <p className={classes.Autor}>{autor}</p>
+      <div className="col-4">
+        <div className={classes.Post} onClick={clicked} role="presentation">
+          <h5>{shorText}</h5>
+          <p className={classes.Autor}>{autor}</p>
+        </div>
       </div>
     </>
   );

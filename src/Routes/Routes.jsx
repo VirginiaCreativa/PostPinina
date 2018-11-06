@@ -16,7 +16,7 @@ class Routes extends Component {
           <Route exact path="/" component={Blog} />
           <Route path="/about" component={About} />
           <Route path="/newpost" component={NewPost} />
-          <Route path="/:id" component={FullPost} />
+          <Route path="/posts/:id" component={FullPost} />
           <Route path="/notfound" component={NotFound} />
           <Redirect from="/*" to="/notfound" />
         </Switch>
