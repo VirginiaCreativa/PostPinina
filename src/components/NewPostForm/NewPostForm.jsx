@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import classes from './NewPostForm.scss';
 
 class newPost extends Component {
@@ -17,9 +17,11 @@ class newPost extends Component {
       body: this.state.content,
       autor: this.state.autor,
     };
-    axios.post('/posts/', data).then(response => {
+    axios.post('/posts', data).then(response => {
       console.log(response);
-      this.setState({ subtmitted: true });
+      this.props.history.replace('/blog');
+      // OR
+      // this.setState({ subtmitted: true });
     });
   };
 
@@ -72,4 +74,4 @@ class newPost extends Component {
   }
 }
 
-export default newPost;
+export default withRouter(newPost);

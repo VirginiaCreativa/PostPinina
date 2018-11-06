@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 import App from './pages/App.jsx';
 
@@ -21,9 +20,4 @@ axios.interceptors.response.use(
   },
 );
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('app'),
-);
+ReactDOM.render(<App />, document.getElementById('app'));
