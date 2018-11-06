@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Post.scss';
 
-const ListPostItem = ({ clicked, title, autor }) => {
+const ListPostItem = ({ title, autor }) => {
   let shorText;
   const size = title.length;
 
@@ -12,7 +12,7 @@ const ListPostItem = ({ clicked, title, autor }) => {
   }
   return (
     <>
-      <div className={classes.Post} onClick={clicked} role="presentation">
+      <div className={classes.Post}>
         <h5>{shorText}</h5>
         <p className={classes.Autor}>{autor}</p>
       </div>
