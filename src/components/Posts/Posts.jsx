@@ -21,18 +21,18 @@ class Posts extends Component {
   }
 
   handleSelectPostId = id => {
-    this.props.history.push('/blog/', id);
+    this.props.history.push('/posts/', id);
   };
 
   render() {
     console.log(this.props);
     return (
       <>
-        <Route path="/blog/:id" component={FullPost} />
+        <Route path="/posts/:id" component={FullPost} />
         <div className="row">
           {this.state.posts.map(item => (
             <div className="col-4" key={item.id}>
-              <Link to={'/blog/' + item.id}>
+              <Link to={'/posts/' + item.id}>
                 <Post
                   clicked={() => this.handleSelectPostId(item.id)}
                   {...item}
