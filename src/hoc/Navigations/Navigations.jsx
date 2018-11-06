@@ -11,6 +11,9 @@ const Navigations = () => (
       <NavLink toLink="/about" activeClassName>
         About
       </NavLink>
+      <NavLink toLink="/blog" activeClassName>
+        Blog
+      </NavLink>
       <NavLink
         toLink={{
           pathname: '/newpost',
