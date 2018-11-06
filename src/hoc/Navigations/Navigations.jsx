@@ -7,7 +7,15 @@ const Navigations = () => (
     <ul className="nav justify-content-end">
       <NavLink toLink="/">Home</NavLink>
       <NavLink toLink="/about">About</NavLink>
-      <NavLink toLink="/newpost">New Post</NavLink>
+      <NavLink
+        toLink={{
+          pathname: '/newpost',
+          hash: '#submit',
+          search: '?quick-subtime=true',
+        }}
+      >
+        New Post
+      </NavLink>
     </ul>
   </div>
 );
