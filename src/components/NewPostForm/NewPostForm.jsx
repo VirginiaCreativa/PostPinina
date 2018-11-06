@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 import classes from './NewPostForm.scss';
 
 class newPost extends Component {
@@ -7,6 +8,7 @@ class newPost extends Component {
     title: '',
     content: '',
     autor: 'Virginia',
+    subtmitted: false,
   };
 
   handlePostData = () => {
@@ -15,13 +17,19 @@ class newPost extends Component {
       body: this.state.content,
       autor: this.state.autor,
     };
-    axios.post('/posts/', data).then(response => console.log(response));
+    axios.post('/posts/', data).then(response => {
+      console.log(response);
+      this.setState({ subtmitted: true });
+    });
   };
 
   render() {
+    let redirect = null;
+    if (this.state.subtmitted) redirect = <Redirect to="/blog" />;
     return (
       <>
         <div className={classes.NewPost}>
+          {redirect}
           <form>
             <div className="form-group">
               <input
