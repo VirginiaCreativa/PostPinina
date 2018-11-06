@@ -7,7 +7,7 @@ class Blog extends Component {
   render() {
     return (
       <>
-        <Posts sliceCant="10" />
+        <Posts sliceCant="6" />
       </>
     );
   }

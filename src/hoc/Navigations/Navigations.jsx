@@ -5,7 +5,7 @@ import NavLink from './Navigation/Navigation';
 const Navigations = () => (
   <div className={classes.Navigations}>
     <ul className="nav justify-content-end">
-      <NavLink toLink="/" exact activeClassName>
+      <NavLink toLink="/" activeClassName>
         Home
       </NavLink>
       <NavLink toLink="/about" activeClassName>

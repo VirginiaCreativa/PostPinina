@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import Post from './Post/Post';
+import FullPost from '../FullPost/FullPost';
 
 class Posts extends Component {
   state = {
@@ -20,16 +21,18 @@ class Posts extends Component {
   }
 
   handleSelectPostId = id => {
-    console.log(id);
+    this.props.history.push('/blog/', id);
   };
 
   render() {
+    console.log(this.props);
     return (
       <>
+        <Route path="/blog/:id" component={FullPost} />
         <div className="row">
           {this.state.posts.map(item => (
             <div className="col-4" key={item.id}>
-              <Link to={'/posts/' + item.id}>
+              <Link to={'/blog/' + item.id}>
                 <Post
                   clicked={() => this.handleSelectPostId(item.id)}
                   {...item}
@@ -43,4 +46,4 @@ class Posts extends Component {
   }
 }
 
-export default Posts;
+export default withRouter(Posts);
